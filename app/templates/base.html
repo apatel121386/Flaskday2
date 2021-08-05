@@ -7,17 +7,15 @@
         <meta name="Description" content="Enter your description here"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-        <!--<link rel="stylesheet" href="assets/css/style.css">-->
+        <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
         <title>{{ title }}</title>
     </head>
     <body>
 
-
-
         {% include 'nav.html' %}
-
+        
         <div class="container">
-
+        
           {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}
               {% for category, message in messages %}
@@ -28,13 +26,11 @@
               {% endfor %}
             {% endif %}
           {% endwith %}
-        
 
-        
 
-            {% block content %}
+          {% block content %}
 
-            {% endblock content %}
+          {% endblock content %}
         </div>
         
         
